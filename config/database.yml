@@ -20,6 +20,8 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: myapp
+  password: password1
 
 development:
   <<: *default
@@ -58,6 +60,8 @@ development:
 test:
   <<: *default
   database: flight_review_crud_test
+  username: myapp
+  password: password1
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
